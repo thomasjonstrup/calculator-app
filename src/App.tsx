@@ -139,7 +139,7 @@ function App() {
 				// eslint-disable-next-line
 				const value = eval(calcValue);
 
-				return setCalculatedValue(value);
+				return setCalculatedValue(formatNumber(value));
 			} catch (error) {
 				return setCalculatedValue("");
 			}

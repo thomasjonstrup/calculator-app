@@ -277,17 +277,20 @@ pre {
 	}
 
 	&--primary {
-		background-color: $primary-color;
+		background-color: $red;
+		box-shadow: 0px 0.4rem 0px $dark-red;
 		color: $white;
 	}
 
 	&--secondary {
 		background-color: $light-grayish-orange;
+		box-shadow: 0px 0.4rem 0px $grayish-orange;
 		color: $body-bg;
 	}
 	&--tetriary {
 		background-color: $keys-bg;
 		color: $white;
+		box-shadow: 0px 0.4rem 0px $keys-shadow;
 	}
 
 	&-outline {
