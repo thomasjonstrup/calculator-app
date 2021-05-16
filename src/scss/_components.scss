@@ -12,6 +12,9 @@
 		padding-right: 2rem;
 		padding-left: 1rem;
 		border-radius: 0.8rem;
+
+		@include set-color-theme(background-color, bg-input);
+		@include set-color-theme(color, body-color);
 	}
 
 	&__theme {
@@ -45,6 +48,10 @@
 
 		&--active {
 			background-color: $red;
+			@include set-color-theme(
+				background-color,
+				btn-primary-background-color
+			);
 		}
 	}
 
@@ -53,6 +60,18 @@
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		padding-bottom: 2rem;
+	}
+
+	&__right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		p {
+			font-size: 1rem;
+			align-self: flex-end;
+			padding-bottom: 0.5rem;
+		}
 	}
 
 	&__content {
@@ -65,6 +84,8 @@
 		margin-top: 2rem;
 		background-color: $toggle-bg;
 		border-radius: 0.4rem;
+
+		@include set-color-theme(background-color, bg-toggle-keypad-color);
 	}
 
 	.btn--equal {
@@ -314,17 +335,39 @@ pre {
 		background-color: $red;
 		box-shadow: 0px 0.4rem 0px $dark-red;
 		color: $white;
+
+		@include set-color-theme(
+			background-color,
+			btn-primary-background-color
+		);
+		@include set-color-theme(box-shadow, btn-primary-shadow-color);
+		@include set-color-theme(color, btn-primary-color);
 	}
 
 	&--secondary {
 		background-color: $light-grayish-orange;
 		box-shadow: 0px 0.4rem 0px $grayish-orange;
 		color: $body-bg;
+
+		@include set-color-theme(
+			background-color,
+			btn-secondary-background-color
+		);
+		@include set-color-theme(box-shadow, btn-secondary-shadow-color);
+		@include set-color-theme(color, btn-secondary-color);
 	}
+
 	&--tetriary {
 		background-color: $keys-bg;
 		color: $white;
 		box-shadow: 0px 0.4rem 0px $keys-shadow;
+
+		@include set-color-theme(
+			background-color,
+			btn-tetriary-background-color
+		);
+		@include set-color-theme(box-shadow, btn-tetriary-shadow-color);
+		@include set-color-theme(color, btn-tetriary-color);
 	}
 
 	&-outline {

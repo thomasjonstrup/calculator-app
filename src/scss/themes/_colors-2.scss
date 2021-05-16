@@ -1,0 +1,37 @@
+$dark-primary: #212121;
+$dark-secondary: #303030;
+$bg-color: hsl(0, 0%, 90%);
+$body-color: hsl(60, 10%, 19%);
+$bg-toggle-keypad-color: hsl(0, 5%, 81%);
+$btn-primary-color: hsl(0, 0, 100%);
+$btn-primary-background-color: hsl(25, 98%, 40%);
+$btn-primary-shadow-color: hsl(25, 99%, 27%);
+
+$btn-secondary-color: hsl(60, 10%, 19%);
+$btn-secondary-background-color: hsl(45, 7%, 89%);
+$btn-secondary-shadow-color: hsl(35, 11%, 61%);
+
+$btn-tetriary-color: hsl(0, 0, 100%);
+$btn-tetriary-background-color: hsl(185, 42%, 37%);
+$btn-tetriary-shadow-color: hsl(185, 58%, 25%);
+
+$bg-input: hsl(0, 0%, 93%);
+
+$theme-2: (
+	// new
+	btn-primary-color: $btn-primary-color,
+	btn-primary-background-color: $btn-primary-background-color,
+	btn-primary-shadow-color: 0px 0.4rem 0px $btn-primary-shadow-color,
+	btn-secondary-color: $btn-secondary-color,
+	btn-secondary-background-color: $btn-secondary-background-color,
+	btn-secondary-shadow-color: 0px 0.4rem 0px $btn-secondary-shadow-color,
+	btn-tetriary-color: $btn-tetriary-color,
+	btn-tetriary-background-color: $btn-tetriary-background-color,
+	btn-tetriary-shadow-color: 0px 0.4rem 0px $btn-tetriary-shadow-color,
+	bg-color: $bg-color,
+	bg-input: $bg-input,
+	bg-toggle-keypad-color: $bg-toggle-keypad-color,
+	clr-primary: $dark-primary,
+	clr-secondary: $dark-secondary,
+	body-color: $body-color
+);

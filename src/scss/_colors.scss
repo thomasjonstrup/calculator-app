@@ -1,0 +1,9 @@
+@import "themes/colors-1";
+@import "themes/colors-2";
+@import "themes/colors-3";
+
+$themeColors: (
+    1: $theme-1,
+    2: $theme-2,
+    3: $theme-3
+);

@@ -65,6 +65,9 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	@include set-color-theme(background-color, bg-color);
+	@include set-color-theme(color, body-color);
 }
 
 .header {

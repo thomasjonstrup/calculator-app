@@ -5,49 +5,55 @@ interface ToggleThemeProps {
 	onChangeTheme: (event: React.FormEvent<HTMLInputElement>) => void;
 }
 
+const themes = {
+	theme1: "theme-1",
+	theme2: "theme-2",
+	theme3: "theme-3",
+};
+
 const ToggleTheme: React.FC<ToggleThemeProps> = ({ theme, onChangeTheme }) => {
 	return (
 		<div className="calculator__theme">
-			<label htmlFor="theme1">
+			<label htmlFor={themes.theme1}>
 				<input
 					type="radio"
-					name="theme1"
-					id="theme1"
-					checked={theme === "theme1"}
+					name={themes.theme1}
+					id={themes.theme1}
+					checked={theme === themes.theme1}
 					//onClick={onChangeTheme}
 					onChange={onChangeTheme}
 				/>
 				<div
 					className={`toggle${
-						theme === "theme1" ? " toggle--active" : ""
+						theme === themes.theme1 ? " toggle--active" : ""
 					}`}
 				/>
 			</label>
-			<label htmlFor="theme2">
+			<label htmlFor={themes.theme2}>
 				<input
 					type="radio"
-					name="theme2"
-					id="theme2"
-					checked={theme === "theme2"}
+					name={themes.theme2}
+					id={themes.theme2}
+					checked={theme === themes.theme2}
 					onChange={onChangeTheme}
 				/>
 				<div
 					className={`toggle${
-						theme === "theme2" ? " toggle--active" : ""
+						theme === themes.theme2 ? " toggle--active" : ""
 					}`}
 				/>
 			</label>
-			<label htmlFor="theme3">
+			<label htmlFor={themes.theme3}>
 				<input
 					type="radio"
-					name="theme3"
-					id="theme3"
-					checked={theme === "theme3"}
+					name={themes.theme3}
+					id={themes.theme3}
+					checked={theme === themes.theme3}
 					onChange={onChangeTheme}
 				/>
 				<div
 					className={`toggle${
-						theme === "theme3" ? " toggle--active" : ""
+						theme === themes.theme3 ? " toggle--active" : ""
 					}`}
 				/>
 			</label>

@@ -11,6 +11,8 @@ interface calcButton {
 
 const addBodyClass = (className: string) =>
 	document.body.classList.add(className);
+const addHtmlClass = (className: string) =>
+	document.documentElement.classList.add(className);
 
 export const formatNumber = (inputNumber: string) => {
 	let formetedNumber = Number(inputNumber)
@@ -26,7 +28,7 @@ export const formatNumber = (inputNumber: string) => {
 function App() {
 	const [calcValue, setCalcValue] = useState("");
 	const [calculatedValue, setCalculatedValue] = useState("");
-	const [theme, setTheme] = useState("theme1");
+	const [theme, setTheme] = useState("theme-1");
 
 	const calcButtons: calcButton[] = [
 		{
@@ -135,7 +137,9 @@ function App() {
 
 			if (!document.body.classList.contains(themeName)) {
 				document.body.className = "";
+				document.documentElement.className = "";
 				addBodyClass(themeName);
+				addHtmlClass(themeName);
 			}
 		},
 		[]
@@ -178,18 +182,22 @@ function App() {
 					<div className="calculator">
 						<div className="calculator__top">
 							<div className="calculator__inner">
-								<div className="calculator__left">calc</div>
+								<div className="calculator__left">
+									<h1>calc</h1>
+								</div>
 								<div className="calculator__right">
 									<p>Theme</p>
-									<div className="calculator__theme-numbers">
-										<p>1</p>
-										<p>2</p>
-										<p>3</p>
+									<div>
+										<div className="calculator__theme-numbers">
+											<p>1</p>
+											<p>2</p>
+											<p>3</p>
+										</div>
+										<ToggleTheme
+											theme={theme}
+											onChangeTheme={handleThemeChange}
+										/>
 									</div>
-									<ToggleTheme
-										theme={theme}
-										onChangeTheme={handleThemeChange}
-									/>
 								</div>
 							</div>
 							<input
