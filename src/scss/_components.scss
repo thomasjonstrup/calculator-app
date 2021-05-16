@@ -14,6 +14,40 @@
 		border-radius: 0.8rem;
 	}
 
+	&__theme {
+		border-radius: 20px;
+		padding: 1.5px 3px 1px;
+		background-color: $toggle-bg;
+		display: flex;
+		justify-content: center;
+
+		&-numbers {
+			font-size: 1rem;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 6px;
+			line-height: 0;
+		}
+	}
+
+	input[type="radio"] {
+		appearance: none;
+		display: none;
+	}
+
+	.toggle {
+		width: 1.1em;
+		height: 1.1em;
+		border-radius: 50%;
+		box-sizing: border-box;
+		padding: 2px;
+		margin: 2px;
+
+		&--active {
+			background-color: $red;
+		}
+	}
+
 	&__inner {
 		display: flex;
 		flex-wrap: nowrap;

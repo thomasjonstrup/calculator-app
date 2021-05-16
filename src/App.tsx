@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./scss/main.scss";
+
+import ToggleTheme from "./components/ToggleTheme";
 
 interface calcButton {
 	value: string;
 	displayValue: string;
 	type: string;
 }
+
+const addBodyClass = (className: string) =>
+	document.body.classList.add(className);
 
 export const formatNumber = (inputNumber: string) => {
 	let formetedNumber = Number(inputNumber)
@@ -21,6 +26,7 @@ export const formatNumber = (inputNumber: string) => {
 function App() {
 	const [calcValue, setCalcValue] = useState("");
 	const [calculatedValue, setCalculatedValue] = useState("");
+	const [theme, setTheme] = useState("theme1");
 
 	const calcButtons: calcButton[] = [
 		{
@@ -122,6 +128,19 @@ function App() {
 		setCalcValue(event.currentTarget.value);
 	};
 
+	const handleThemeChange = useCallback(
+		(event: React.FormEvent<HTMLInputElement>) => {
+			const themeName: string = event.currentTarget.name;
+			setTheme(event.currentTarget.name);
+
+			if (!document.body.classList.contains(themeName)) {
+				document.body.className = "";
+				addBodyClass(themeName);
+			}
+		},
+		[]
+	);
+
 	const onClick = (event: React.FormEvent<HTMLButtonElement>): void => {
 		if (event.currentTarget.value === "del") {
 			const newValue = calcValue.slice(0, -1);
@@ -160,7 +179,18 @@ function App() {
 						<div className="calculator__top">
 							<div className="calculator__inner">
 								<div className="calculator__left">calc</div>
-								<div className="calculator__right">Theme</div>
+								<div className="calculator__right">
+									<p>Theme</p>
+									<div className="calculator__theme-numbers">
+										<p>1</p>
+										<p>2</p>
+										<p>3</p>
+									</div>
+									<ToggleTheme
+										theme={theme}
+										onChangeTheme={handleThemeChange}
+									/>
+								</div>
 							</div>
 							<input
 								type="text"
