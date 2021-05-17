@@ -45,6 +45,7 @@
 		box-sizing: border-box;
 		padding: 2px;
 		margin: 2px;
+		display: inherit;
 
 		&--active {
 			background-color: $red;

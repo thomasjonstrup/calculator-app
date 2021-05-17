@@ -23,7 +23,7 @@ const ToggleTheme: React.FC<ToggleThemeProps> = ({ theme, onChangeTheme }) => {
 					//onClick={onChangeTheme}
 					onChange={onChangeTheme}
 				/>
-				<div
+				<span
 					className={`toggle${
 						theme === themes.theme1 ? " toggle--active" : ""
 					}`}
@@ -37,7 +37,7 @@ const ToggleTheme: React.FC<ToggleThemeProps> = ({ theme, onChangeTheme }) => {
 					checked={theme === themes.theme2}
 					onChange={onChangeTheme}
 				/>
-				<div
+				<span
 					className={`toggle${
 						theme === themes.theme2 ? " toggle--active" : ""
 					}`}
@@ -51,7 +51,7 @@ const ToggleTheme: React.FC<ToggleThemeProps> = ({ theme, onChangeTheme }) => {
 					checked={theme === themes.theme3}
 					onChange={onChangeTheme}
 				/>
-				<div
+				<span
 					className={`toggle${
 						theme === themes.theme3 ? " toggle--active" : ""
 					}`}
