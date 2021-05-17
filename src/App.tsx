@@ -202,7 +202,8 @@ function App() {
 							</div>
 							<input
 								type="text"
-								name="calculator-input"
+								name="calculate"
+								title="calculate"
 								className="calculator__input"
 								value={
 									calculatedValue
